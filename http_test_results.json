@@ -1,0 +1,97 @@
+{
+  "start_time": "2025-12-08T18:47:51.396921",
+  "tests": [
+    {
+      "name": "Homepage page response",
+      "passed": true,
+      "details": "Status: 200, Time: 0.01s",
+      "timestamp": "2025-12-08T18:47:51.410528"
+    },
+    {
+      "name": "Homepage response time",
+      "passed": true,
+      "details": "Response time: 0.01s (max: 5.0s)",
+      "timestamp": "2025-12-08T18:47:51.423239"
+    },
+    {
+      "name": "Impressum page response",
+      "passed": true,
+      "details": "Status: 200, Time: 0.05s",
+      "timestamp": "2025-12-08T18:47:51.477396"
+    },
+    {
+      "name": "Impressum response time",
+      "passed": true,
+      "details": "Response time: 0.01s (max: 5.0s)",
+      "timestamp": "2025-12-08T18:47:51.491713"
+    },
+    {
+      "name": "Datenschutz page response",
+      "passed": true,
+      "details": "Status: 200, Time: 0.06s",
+      "timestamp": "2025-12-08T18:47:51.547697"
+    },
+    {
+      "name": "Datenschutz response time",
+      "passed": true,
+      "details": "Response time: 0.02s (max: 5.0s)",
+      "timestamp": "2025-12-08T18:47:51.569076"
+    },
+    {
+      "name": "AGB page response",
+      "passed": true,
+      "details": "Status: 200, Time: 0.04s",
+      "timestamp": "2025-12-08T18:47:51.607116"
+    },
+    {
+      "name": "AGB response time",
+      "passed": true,
+      "details": "Response time: 0.01s (max: 5.0s)",
+      "timestamp": "2025-12-08T18:47:51.620691"
+    },
+    {
+      "name": "Thank You page response",
+      "passed": true,
+      "details": "Status: 200, Time: 0.03s",
+      "timestamp": "2025-12-08T18:47:51.654912"
+    },
+    {
+      "name": "Thank You response time",
+      "passed": true,
+      "details": "Response time: 0.02s (max: 5.0s)",
+      "timestamp": "2025-12-08T18:47:51.670952"
+    },
+    {
+      "name": "Logo accessibility",
+      "passed": true,
+      "details": "Status: 200, Size: 75974 bytes, Time: 0.00s",
+      "timestamp": "2025-12-08T18:47:51.674368"
+    },
+    {
+      "name": "robots.txt",
+      "passed": true,
+      "details": "Status: 200, Content length: 3589",
+      "timestamp": "2025-12-08T18:47:51.687752"
+    },
+    {
+      "name": "sitemap.xml",
+      "passed": true,
+      "details": "Status: 200 (present)",
+      "timestamp": "2025-12-08T18:47:51.689009"
+    },
+    {
+      "name": "Contact form endpoint",
+      "passed": false,
+      "details": "Status: 405, Expected: 200/302/303",
+      "timestamp": "2025-12-08T18:47:51.706986"
+    }
+  ],
+  "summary": {
+    "total": 14,
+    "passed": 13,
+    "failed": 1,
+    "errors": [],
+    "success_rate": 92.85714285714286
+  },
+  "end_time": "2025-12-08T18:47:51.708670"
+}

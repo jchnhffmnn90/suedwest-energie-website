@@ -1,0 +1,43 @@
+{
+  "start_time": "2025-12-08T20:52:37.794305",
+  "tests": [
+    {
+      "name": "Fake data generation",
+      "passed": true,
+      "details": "Name: Eitel Mies..., Email: kostolzinbela@example.net, Company: Briemer Reising e.G....",
+      "timestamp": "2025-12-08T20:52:37.794521"
+    },
+    {
+      "name": "Form validation function",
+      "passed": true,
+      "details": "Name validation: YES, Email validation: YES, Company validation: YES, Message validation: YES, Validate method: YES",
+      "timestamp": "2025-12-08T20:52:37.796764"
+    },
+    {
+      "name": "Email validation logic",
+      "passed": false,
+      "details": "Valid email 'polinajunk@example.com': PASS; Valid email 'test@example.com': PASS; Valid email 'user.name@domain.co.uk': PASS; Valid email 'user+tag@example.org': PASS; Invalid email 'invalid-email': PASS; Invalid email 'test@': PASS; Invalid email '@example.com': PASS; Invalid email 'test@.com': PASS; Invalid email 'test': PASS; Invalid email '': PASS; Invalid email 'test@example': PASS; Invalid email 'test@.domain.com': FAIL",
+      "timestamp": "2025-12-08T20:52:37.797003"
+    },
+    {
+      "name": "Message length validation",
+      "passed": true,
+      "details": "Valid message length '52': PASS; Valid message length '112': PASS; Valid message length '10': PASS; Invalid message length '0': PASS; Invalid message length '5': PASS; Invalid message length '9': PASS",
+      "timestamp": "2025-12-08T20:52:37.797095"
+    },
+    {
+      "name": "Ninox integration functionality",
+      "passed": false,
+      "details": "Missing: API Key, Database ID, Table ID",
+      "timestamp": "2025-12-08T20:52:38.259862"
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "passed": 3,
+    "failed": 2,
+    "errors": [],
+    "success_rate": 60.0
+  },
+  "end_time": "2025-12-08T20:52:38.259900"
+}

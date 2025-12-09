@@ -12,6 +12,14 @@ def thank_you() -> rx.Component:
         rx.box(
             rx.container(
                 rx.vstack(
+                    # Add logo to the thank you page
+                    rx.image(
+                        src="/logo.jpg",
+                        alt=Config.COMPANY_NAME,
+                        height="80px",
+                        width="auto",
+                        margin_bottom="2rem",
+                    ),
                     rx.text("✓", font_size="5rem", color=Config.SECONDARY_COLOR),
                     rx.heading("Vielen Dank für Ihre Anfrage!", size="8", color=Config.TEXT_DARK, text_align="center"),
                     rx.text(
@@ -34,7 +42,7 @@ def thank_you() -> rx.Component:
                     ),
                     spacing="6",
                     align="center",
-                    padding_y="10rem",
+                    padding_y="5rem",  # Reduced padding
                 ),
                 max_width="1200px",
             ),

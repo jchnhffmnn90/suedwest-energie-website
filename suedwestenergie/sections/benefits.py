@@ -38,7 +38,7 @@ def benefits_section() -> rx.Component:
             "Jährliche automatische Überprüfung und Optimierung Ihrer Energie-Tarife – ohne dass Sie sich darum kümmern müssen."
         ),
     ]
-    
+
     return rx.box(
         rx.container(
             rx.vstack(
@@ -47,14 +47,16 @@ def benefits_section() -> rx.Component:
                     size="8",
                     color=Config.TEXT_DARK,
                     text_align="center",
-                    margin_bottom="1rem"
+                    margin_bottom="1rem",
+                    width="100%"
                 ),
                 rx.text(
                     "Ihre Vorteile für eine nachhaltige Zukunft",
                     font_size="1.2rem",
                     color=Config.TEXT_LIGHT,
                     text_align="center",
-                    margin_bottom="3rem"
+                    margin_bottom="3rem",
+                    width="100%"
                 ),
                 rx.grid(
                     *[
@@ -98,11 +100,16 @@ def benefits_section() -> rx.Component:
                     columns=rx.breakpoints(initial="1", sm="1", md="2", lg="3"),
                     spacing="4",
                     width="100%",
+                    justify_items="center",
                 ),
                 spacing="4",
                 padding_y="5rem",
+                align="center",
+                width="100%",
             ),
             max_width="1200px",
+            padding_x="1rem",  # Add some horizontal padding on small screens
+            margin_x="auto",
         ),
         background=Config.BG_LIGHT,
         width="100%",

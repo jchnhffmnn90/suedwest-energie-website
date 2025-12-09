@@ -12,6 +12,14 @@ def impressum() -> rx.Component:
         rx.box(
             rx.container(
                 rx.vstack(
+                    # Add logo to the impressum page for brand consistency
+                    rx.image(
+                        src="/logo.jpg",
+                        alt=Config.COMPANY_NAME,
+                        height="80px",
+                        width="auto",
+                        margin_bottom="2rem",
+                    ),
                     rx.heading("Impressum", size="8", color=Config.TEXT_DARK, margin_bottom="2rem"),
                     rx.vstack(
                         rx.heading("Angaben gemäß § 5 TMG", size="5", color=Config.TEXT_DARK),

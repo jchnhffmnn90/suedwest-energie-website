@@ -17,6 +17,9 @@ class StatusState(rx.State):
     
     email_status: str = "Checking..."
     email_operational: bool = False
+
+    admin_email_status: str = "Checking..."
+    admin_email_operational: bool = False
     
     last_updated: str = ""
     
@@ -46,6 +49,14 @@ class StatusState(rx.State):
         else:
             self.email_status = "Not Configured"
             self.email_operational = False
+
+        # 4. Check Admin Email
+        if Config.EMAIL_HOST:
+            self.admin_email_status = "Operational"
+            self.admin_email_operational = True
+        else:
+            self.admin_email_status = "Not Configured"
+            self.admin_email_operational = False
             
         self.last_updated = datetime.now().strftime("%d.%m.%Y %H:%M:%S")
 
@@ -95,9 +106,17 @@ def status_page() -> rx.Component:
         rx.box(
             rx.container(
                 rx.vstack(
+                    # Add logo to the status page for brand consistency
+                    rx.image(
+                        src="/logo.jpg",
+                        alt=Config.COMPANY_NAME,
+                        height="80px",
+                        width="auto",
+                        margin_bottom="2rem",
+                    ),
                     rx.heading(
-                        "System Status", 
-                        size="8", 
+                        "System Status",
+                        size="8",
                         color=Config.TEXT_DARK,
                         margin_bottom="0.5rem"
                     ),
@@ -132,6 +151,7 @@ def status_page() -> rx.Component:
                         service_card("Website & Frontend", StatusState.website_status, StatusState.website_operational, "🌐"),
                         service_card("Datenbank & API", StatusState.db_status, StatusState.db_operational, "🗄️"),
                         service_card("E-Mail Service", StatusState.email_status, StatusState.email_operational, "📧"),
+                        service_card("Admin Support (admin@suedwest-energie.de)", StatusState.admin_email_status, StatusState.admin_email_operational, "👤"),
                         spacing="3",
                         width="100%",
                     ),

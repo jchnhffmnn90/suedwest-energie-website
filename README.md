@@ -90,27 +90,3 @@ For production deployment, this application has been enhanced with the following
 
 See the [PRODUCTION.md](PRODUCTION.md) file for detailed production deployment instructions.
 
-## 🌐 GitHub Pages Deployment
-
-This website can also be deployed as a static site to GitHub Pages. The following has been configured for you:
-
-- A GitHub Actions workflow has been created in `.github/workflows/deploy.yml`
-- The workflow automatically exports the Reflex app as a static site on each push to the main branch
-- The site is built and deployed automatically when changes are pushed to the repository
-
-### How to deploy to GitHub Pages:
-
-1. Push this repository to GitHub:
-   ```bash
-   git remote add origin https://github.com/your-username/your-repository-name.git
-   git branch -M main
-   git push -u origin main
-   ```
-
-2. In your GitHub repository, go to Settings > Pages and select "GitHub Actions" as the source
-
-3. The site will be automatically built and deployed when changes are pushed to the main branch
-
-Alternatively, you can manually trigger the workflow in the Actions tab to deploy immediately.
-
-Your website will be available at: `https://your-username.github.io/your-repository-name/`

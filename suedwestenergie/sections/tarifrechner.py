@@ -81,6 +81,8 @@ def tarifrechner_section() -> rx.Component:
                 padding_y="5rem",
             ),
             max_width="1200px",
+            padding_x="1rem",
+            margin_x="auto",
         ),
         id="tarifrechner",
         background="white",

@@ -1,0 +1,61 @@
+{
+  "start_time": "2025-12-08T19:06:29.803802",
+  "tests": [
+    {
+      "name": "Form fields existence",
+      "passed": false,
+      "details": "Name field: NOT FOUND; Email field: NOT FOUND; Phone field: NOT FOUND; Company field: NOT FOUND; Message field: NOT FOUND; Submit button: NOT FOUND",
+      "timestamp": "2025-12-08T19:06:29.821874"
+    },
+    {
+      "name": "Email validation",
+      "passed": true,
+      "details": "Email 'invalid-email': Correctly rejected; Email 'test@': Correctly rejected; Email '@example.com': Correctly rejected; Email 'test@.com': Correctly rejected",
+      "timestamp": "2025-12-08T19:06:29.889776"
+    },
+    {
+      "name": "Required fields validation",
+      "passed": true,
+      "details": "Without name field: Error found",
+      "timestamp": "2025-12-08T19:06:29.904665"
+    },
+    {
+      "name": "Message length validation",
+      "passed": true,
+      "details": "With short message: Error found",
+      "timestamp": "2025-12-08T19:06:29.919763"
+    },
+    {
+      "name": "Successful submission",
+      "passed": false,
+      "details": "Status: 405, URL: http://localhost:3000/ - No success indicators found",
+      "timestamp": "2025-12-08T19:06:29.936396"
+    },
+    {
+      "name": "Ninox configuration",
+      "passed": false,
+      "details": "API Key: Not configured; Database ID: Not configured; Table ID: Not configured",
+      "timestamp": "2025-12-08T19:06:29.937224"
+    },
+    {
+      "name": "Ninox client initialization",
+      "passed": false,
+      "details": "Ninox client initialization failed: Ninox configuration is incomplete. Please check your environment variables.",
+      "timestamp": "2025-12-08T19:06:30.606897"
+    },
+    {
+      "name": "Ninox save function",
+      "passed": true,
+      "details": "Function executed, result: False",
+      "timestamp": "2025-12-08T19:06:30.607048"
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "passed": 4,
+    "failed": 4,
+    "errors": [],
+    "success_rate": 50.0
+  },
+  "end_time": "2025-12-08T19:06:30.607065"
+}

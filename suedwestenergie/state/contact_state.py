@@ -3,9 +3,11 @@
 import reflex as rx
 import re
 from typing import Optional
+from datetime import datetime
 from suedwestenergie.utils.logger import log_error, log_info
 from suedwestenergie.utils.analytics import track_form_submission
 from suedwestenergie.utils.email import send_contact_form_notification
+from suedwestenergie.utils.ninox_client import save_contact_to_ninox
 
 
 class ContactFormState(rx.State):
@@ -58,6 +60,26 @@ class ContactFormState(rx.State):
 
             # Track form submission event
             track_form_submission("contact_form")
+
+            # Prepare data for Ninox database
+            form_data = {
+                "name": self.name,
+                "email": self.email,
+                "phone": self.phone,
+                "company": self.company,
+                "message": self.message,
+                "submitted_at": datetime.now().isoformat()
+            }
+
+            # Save to Ninox database
+            try:
+                ninox_saved = save_contact_to_ninox(form_data)
+                if ninox_saved:
+                    log_info("Contact form data successfully saved to Ninox database", "ContactFormState.submit_form")
+                else:
+                    log_error("Failed to save contact form data to Ninox database", "ContactFormState.submit_form")
+            except Exception as ninox_error:
+                log_error(f"Error saving to Ninox database: {ninox_error}", "ContactFormState.submit_form")
 
             # Attempt to send notification email
             email_sent = send_contact_form_notification(

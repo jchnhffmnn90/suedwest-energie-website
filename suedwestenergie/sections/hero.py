@@ -9,6 +9,14 @@ def hero_section() -> rx.Component:
     return rx.box(
         rx.container(
             rx.vstack(
+                # Add logo to the hero section for strong brand presence
+                rx.image(
+                    src="/logo.jpg",
+                    alt=Config.COMPANY_NAME,
+                    height="100px",
+                    width="auto",
+                    margin_bottom="2rem",
+                ),
                 rx.heading(
                     "Nachhaltige Energielösungen für Ihr Unternehmen",
                     size="9",
@@ -16,6 +24,7 @@ def hero_section() -> rx.Component:
                     text_align="center",
                     font_weight="700",
                     line_height="1.2",
+                    width="100%",
                 ),
                 rx.heading(
                     "intelligent, umweltfreundlich, kostengünstig",
@@ -24,14 +33,15 @@ def hero_section() -> rx.Component:
                     text_align="center",
                     font_weight="600",
                     margin_top="1rem",
+                    width="100%",
                 ),
                 rx.text(
-                    "Finden Sie die besten grünen Strom- und Gas-Tarife auf dem Markt. Wir vergleichen über 250 Energieversorger für Sie und unterstützen Ihren Weg zu nachhaltiger Energie – transparent, unabhängig und 100% kostenfrei.",
+                    "Finden Sie die besten nachhaltigen Strom- und Gas-Tarife auf dem Markt. Wir vergleichen über 250 Energieversorger für Sie und unterstützen Ihren Weg zu nachhaltiger Energie – transparent, unabhängig und 100% kostenfrei.",
                     font_size="1.25rem",
                     color=Config.TEXT_LIGHT,
                     text_align="center",
                     max_width="800px",
-                    margin_top="1.5rem",
+                    margin="1.5rem auto",  # Center the text block
                     line_height="1.6",
                 ),
                 rx.hstack(
@@ -70,6 +80,7 @@ def hero_section() -> rx.Component:
                     margin_top="2rem",
                     flex_wrap="wrap",
                     justify="center",
+                    width="100%",
                 ),
                 rx.hstack(
                     rx.vstack(
@@ -91,12 +102,16 @@ def hero_section() -> rx.Component:
                     margin_top="3rem",
                     justify="center",
                     flex_wrap="wrap",
+                    width="100%",
                 ),
                 spacing="4",
                 align="center",
+                width="100%",
                 padding_y="5rem",
             ),
             max_width="1200px",
+            padding_x="1rem",  # Add horizontal padding on smaller screens
+            margin_x="auto",
         ),
         background=f"linear-gradient(135deg, {Config.BG_LIGHT} 0%, {Config.BG_DARK} 100%)",
         width="100%",

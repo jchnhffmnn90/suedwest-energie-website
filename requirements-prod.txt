@@ -1,5 +1,6 @@
 # Production requirements for Südwest-Energie Website
 reflex>=0.4.0
 python-dotenv>=1.0.0
-psycopg2-binary>=2.9.7  # For PostgreSQL database support in production
+psycopg2-binary>=2.9.7
+ninox==0.1.0  # For Ninox database integration
 gunicorn>=21.2.0  # Production WSGI server (if needed)

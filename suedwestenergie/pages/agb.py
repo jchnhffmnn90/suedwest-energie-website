@@ -12,6 +12,14 @@ def agb() -> rx.Component:
         rx.box(
             rx.container(
                 rx.vstack(
+                    # Add logo to the AGB page for brand consistency
+                    rx.image(
+                        src="/logo.jpg",
+                        alt=Config.COMPANY_NAME,
+                        height="80px",
+                        width="auto",
+                        margin_bottom="2rem",
+                    ),
                     rx.heading("Allgemeine Geschäftsbedingungen", size="8", color=Config.TEXT_DARK, margin_bottom="2rem"),
                     rx.vstack(
                         rx.heading("§ 1 Geltungsbereich", size="5", color=Config.TEXT_DARK),

@@ -1,6 +1,10 @@
 # Config File
 import reflex as rx
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Determine if we're in production mode
 IS_PRODUCTION = os.environ.get("REFLEX_ENV") == "prod"

@@ -8,7 +8,6 @@ from suedwestenergie.sections import (
     services_section,
     benefits_section,
     about_section,
-    tarifrechner_section,
     contact_section,
 )
 
@@ -22,7 +21,6 @@ def index() -> rx.Component:
         benefits_section(),
         about_section(),
         services_section(),
-        tarifrechner_section(),
         contact_section(),
         footer(),
     )

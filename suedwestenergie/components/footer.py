@@ -9,15 +9,27 @@ def footer() -> rx.Component:
     return rx.box(
         rx.container(
             rx.vstack(
-                rx.hstack(
+                # Stack footer sections vertically on mobile, horizontally on larger screens
+                rx.vstack(
                     rx.vstack(
-                        rx.heading(Config.COMPANY_NAME, size="6", color="white", margin_bottom="1rem"),
+                        rx.hstack(
+                            rx.image(
+                                src="/logo.jpg",
+                                alt=Config.COMPANY_NAME,
+                                height="30px",
+                                width="auto",
+                                margin_right="0.5rem",
+                            ),
+                            rx.heading(Config.COMPANY_NAME, size="6", color="#2E7D32", margin_bottom="1rem"),  # Darker green
+                            align="center",
+                            spacing="2",
+                        ),
                         rx.text(
                             "Ihr unabhängiger Partner für professionelle Energievermittlung",
                             color="rgba(255,255,255,0.8)",
-                            max_width="300px",
+                            text_align="center",
                         ),
-                        align="start",
+                        align="center",
                         spacing="2",
                     ),
                     rx.vstack(
@@ -27,7 +39,7 @@ def footer() -> rx.Component:
                         rx.link("Vorteile", href="/#vorteile", color="rgba(255,255,255,0.8)"),
                         rx.link("Über uns", href="/#ueber-uns", color="rgba(255,255,255,0.8)"),
                         rx.link("Kontakt", href="/#kontakt", color="rgba(255,255,255,0.8)"),
-                        align="start",
+                        align="center",
                         spacing="2",
                     ),
                     rx.vstack(
@@ -35,7 +47,7 @@ def footer() -> rx.Component:
                         rx.text(f"📧 {Config.EMAIL}", color="rgba(255,255,255,0.8)"),
                         rx.text(f"📞 {Config.PHONE}", color="rgba(255,255,255,0.8)"),
                         rx.text(f"📍 {Config.ADDRESS}", color="rgba(255,255,255,0.8)"),
-                        align="start",
+                        align="center",
                         spacing="2",
                     ),
                     rx.vstack(
@@ -43,14 +55,14 @@ def footer() -> rx.Component:
                         rx.link("Impressum", href="/impressum", color="rgba(255,255,255,0.8)"),
                         rx.link("Datenschutz", href="/datenschutz", color="rgba(255,255,255,0.8)"),
                         rx.link("AGB", href="/agb", color="rgba(255,255,255,0.8)"),
-                        align="start",
+                        align="center",
                         spacing="2",
                     ),
-                    spacing="8",
-                    justify="between",
+                    spacing="6",
+                    align="center",
                     width="100%",
-                    flex_wrap="wrap",
-                    align="start",
+                    # Display as columns on larger screens
+                    flex_direction=["column", "column", "row"],
                 ),
                 rx.divider(margin_y="2rem", border_color="rgba(255,255,255,0.2)"),
                 rx.text(
@@ -61,8 +73,11 @@ def footer() -> rx.Component:
                 ),
                 spacing="4",
                 padding_y="3rem",
+                align="center",
+                width="100%",
             ),
             max_width="1200px",
+            margin_x="auto",
         ),
         background=Config.TEXT_DARK,
         width="100%",

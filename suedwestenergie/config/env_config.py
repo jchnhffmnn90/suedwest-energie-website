@@ -9,7 +9,12 @@ class EnvironmentConfig:
     
     # Database configuration
     DB_URL: str = os.getenv("DB_URL", "sqlite:///reflex.db")
-    
+
+    # Ninox database configuration
+    NINOX_API_KEY: str = os.getenv("NINOX_API_KEY", "")
+    NINOX_DATABASE_ID: str = os.getenv("NINOX_DATABASE_ID", "")
+    NINOX_TABLE_ID: str = os.getenv("NINOX_TABLE_ID", "")
+
     # Application settings
     ENVIRONMENT: str = os.getenv("ENVIRONMENT", "development")
     DEBUG: bool = os.getenv("DEBUG", "False").lower() == "true"
@@ -31,17 +36,17 @@ class EnvironmentConfig:
     PHONE: str = os.getenv("CONTACT_PHONE", "+49 711 12345678")
     ADDRESS: str = os.getenv("CONTACT_ADDRESS", "Stuttgart, Deutschland")
     
-    # Branding - Natural, sustainable color palette
-    PRIMARY_COLOR: str = os.getenv("PRIMARY_COLOR", "#2D5016")  # Forest green (deep, natural)
-    SECONDARY_COLOR: str = os.getenv("SECONDARY_COLOR", "#7CB342")  # Fresh leaf green (vibrant, organic)
-    ACCENT_COLOR: str = os.getenv("ACCENT_COLOR", "#8BC34A")  # Light eco green (bright, hopeful)
-    TEXT_DARK: str = os.getenv("TEXT_DARK", "#1B3409")  # Deep forest (for headings)
-    TEXT_LIGHT: str = os.getenv("TEXT_LIGHT", "#5D7A4A")  # Sage green (for body text)
-    BG_LIGHT: str = os.getenv("BG_LIGHT", "#F1F8E9")  # Soft cream/light green (nature-light)
-    BG_DARK: str = os.getenv("BG_DARK", "#E8F5E0")  # Pale green (subtle earth)
-    CARD_BG: str = os.getenv("CARD_BG", "#FFFFFF")  # Clean white (purity)
-    SKY_BLUE: str = os.getenv("SKY_BLUE", "#81C784")  # Soft sky/water
-    EARTH_BROWN: str = os.getenv("EARTH_BROWN", "#A1887F")  # Natural earth tone
+    # Branding - Cyan/Star-themed color palette (matching reference website)
+    PRIMARY_COLOR: str = os.getenv("PRIMARY_COLOR", "#00bcd4")  # Cyan (primary brand color)
+    SECONDARY_COLOR: str = os.getenv("SECONDARY_COLOR", "#00acc1")  # Darker cyan (accent)
+    ACCENT_COLOR: str = os.getenv("ACCENT_COLOR", "#26c6da")  # Lighter cyan (highlights)
+    TEXT_DARK: str = os.getenv("TEXT_DARK", "#002171")  # Darker deep blue (for headings)
+    TEXT_LIGHT: str = os.getenv("TEXT_LIGHT", "#4fc3f7")  # Light blue (for body text)
+    BG_LIGHT: str = os.getenv("BG_LIGHT", "#e1f5fe")  # Light cyan background
+    BG_DARK: str = os.getenv("BG_DARK", "#b3e5fc")  # Medium cyan background
+    CARD_BG: str = os.getenv("CARD_BG", "#ffffff")  # Clean white (purity)
+    SKY_BLUE: str = os.getenv("SKY_BLUE", "#00bcd4")  # Cyan blue (consistent with theme)
+    EARTH_BROWN: str = os.getenv("EARTH_BROWN", "#ff9800")  # Orange accent (for contrast)
     
     # SEO
     SITE_TITLE: str = os.getenv("SITE_TITLE", "Südwest-Energie - Energievermittlung für Unternehmen")

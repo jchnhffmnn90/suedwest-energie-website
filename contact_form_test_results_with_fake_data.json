@@ -1,0 +1,67 @@
+{
+  "start_time": "2025-12-08T19:12:38.426379",
+  "tests": [
+    {
+      "name": "Page accessibility",
+      "passed": true,
+      "details": "Status: 200",
+      "timestamp": "2025-12-08T19:12:38.441039"
+    },
+    {
+      "name": "Error validation with invalid email",
+      "passed": false,
+      "details": "Status: 405, Redirect: False, Success indicator: False",
+      "timestamp": "2025-12-08T19:12:38.456195"
+    },
+    {
+      "name": "Ninox integration",
+      "passed": false,
+      "details": "Configuration incomplete",
+      "timestamp": "2025-12-08T19:12:38.456962"
+    },
+    {
+      "name": "Form submission #1",
+      "passed": false,
+      "details": "Status: 405, Redirect: False, Success indicator: False",
+      "timestamp": "2025-12-08T19:12:38.472602"
+    },
+    {
+      "name": "Form submission #2",
+      "passed": false,
+      "details": "Status: 405, Redirect: False, Success indicator: False",
+      "timestamp": "2025-12-08T19:12:39.489258"
+    },
+    {
+      "name": "Form submission #3",
+      "passed": false,
+      "details": "Status: 405, Redirect: False, Success indicator: False",
+      "timestamp": "2025-12-08T19:12:40.506892"
+    },
+    {
+      "name": "Form submission #4",
+      "passed": false,
+      "details": "Status: 405, Redirect: False, Success indicator: False",
+      "timestamp": "2025-12-08T19:12:41.523591"
+    },
+    {
+      "name": "Form submission #5",
+      "passed": false,
+      "details": "Status: 405, Redirect: False, Success indicator: False",
+      "timestamp": "2025-12-08T19:12:42.541159"
+    },
+    {
+      "name": "Multiple form submissions",
+      "passed": false,
+      "details": "Successful submissions: 0/5",
+      "timestamp": "2025-12-08T19:12:43.541297"
+    }
+  ],
+  "summary": {
+    "total": 9,
+    "passed": 1,
+    "failed": 8,
+    "errors": [],
+    "success_rate": 11.11111111111111
+  },
+  "end_time": "2025-12-08T19:12:43.541347"
+}

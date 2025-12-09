@@ -11,8 +11,16 @@ def contact_section() -> rx.Component:
     return rx.box(
         rx.container(
             rx.vstack(
-                rx.heading("Jetzt Kontakt aufnehmen", size="8", color=Config.TEXT_DARK, text_align="center", margin_bottom="1rem"),
-                rx.text("Fordern Sie unverbindlich ein individuelles Angebot an", font_size="1.2rem", color=Config.TEXT_LIGHT, text_align="center", margin_bottom="3rem"),
+                # Add logo to the contact section
+                rx.image(
+                    src="/logo.jpg",
+                    alt=Config.COMPANY_NAME,
+                    height="60px",
+                    width="auto",
+                    margin_bottom="1rem",
+                ),
+                rx.heading("Jetzt Kontakt aufnehmen", size="8", color=Config.TEXT_DARK, text_align="center", margin_bottom="1rem", width="100%"),
+                rx.text("Fordern Sie unverbindlich ein individuelles Angebot an", font_size="1.2rem", color=Config.TEXT_LIGHT, text_align="center", margin_bottom="3rem", width="100%"),
                 rx.box(
                     rx.vstack(
                         rx.cond(
@@ -125,6 +133,7 @@ def contact_section() -> rx.Component:
                     box_shadow="0 2px 8px rgba(45,80,22,0.1)",
                     max_width="600px",
                     width="100%",
+                    margin_x="auto",  # Center the form box
                 ),
                 rx.hstack(
                     rx.vstack(
@@ -146,12 +155,16 @@ def contact_section() -> rx.Component:
                     margin_top="3rem",
                     justify="center",
                     flex_wrap="wrap",
+                    width="100%",
                 ),
                 spacing="4",
                 padding_y="5rem",
                 align="center",
+                width="100%",
             ),
             max_width="1200px",
+            padding_x="1rem",  # Add some horizontal padding on small screens
+            margin_x="auto",
         ),
         id="kontakt",
         background=Config.BG_LIGHT,
